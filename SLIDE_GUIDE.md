@@ -10,7 +10,7 @@
 ## Slide 1 — Judul, Kelompok, Anggota (±30 detik)
 
 **Tulis:**
-- Judul: *Segmentasi Pelanggan dengan Clustering Klasik Berbantuan Deep Learning Feature Extractor*
+- Judul: *Pengelompokan Pelanggan Berdasarkan Perilaku Transaksi Menggunakan Fitur Autoencoder dan K-Means*
 - Kelompok: [Nama/No. Kelompok] — LBE KCV 2026
 - Anggota + NIM: [1] … [2] … [3] … [4] …
 - Link repo: `github.com/fardanhafidz/customer-segmentation-lbe-kcv`

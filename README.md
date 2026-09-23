@@ -1,4 +1,4 @@
-# Customer Segmentation — Unsupervised (K-Means / Hierarchical / DBSCAN + DL Autoencoder)
+# Pengelompokan Pelanggan Berdasarkan Perilaku Transaksi Menggunakan Fitur Autoencoder dan K-Means
 
 Tugas Final Project LBE KCV — bagian **Unsupervised**. Model penentu klaster akhir adalah
 **ML klasik**; Deep Learning (MLP Autoencoder PyTorch) dipakai **hanya** sebagai
