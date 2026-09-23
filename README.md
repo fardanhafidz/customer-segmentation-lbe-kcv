@@ -67,8 +67,3 @@ Model Agglomerative/DBSCAN disimpan hanya sebagai artefak `fit_predict`
 - Hierarchical O(n²) → dendrogram memakai subsample 2000 train.
 - DBSCAN sensitif `eps`/`min_samples`; metrik dilaporkan pada titik non-noise.
 - Missing diimputasi median/modus; Autoencoder dilatih ringan 30 epoch.
-
-## Pembagian tugas (edit sesuai kelompok)
-
-- Anggota 1 — preprocessing & PCA; Anggota 2 — Autoencoder DL;
-  Anggota 3 — eksperimen K-Means/Hierarchical/DBSCAN; Anggota 4 — evaluasi, visualisasi & slide/demo.
