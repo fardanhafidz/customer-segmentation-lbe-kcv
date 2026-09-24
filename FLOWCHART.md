@@ -31,3 +31,26 @@ flowchart TD
 
 - **DL**: Autoencoder berhenti di embedding — tidak menentukan klaster.
 - **ML klasik**: K-Means (utama) + Hierarchical + DBSCAN (pembanding).
+
+## Versi slide (disarankan — perbaikan dari draf diagram)
+
+```mermaid
+flowchart LR
+    A[Data Customer<br/>37.5k train / 12.5k test] --> B[Preprocessing<br/>Imputasi + One-Hot + StandardScaler]
+    B --> F[16 Fitur]
+    F --> S1[S1<br/>Scaled 16D]
+    F --> S2[S2<br/>PCA 8D]
+    F --> S3[S3 - DL<br/>Autoencoder 8D<br/>hanya feature extractor]
+    S1 --> K[K-Means<br/>k=2 dari Elbow+Silhouette]
+    S2 --> K
+    S3 --> K
+    F -.-> P[Pembanding<br/>Hierarchical + DBSCAN]
+    P -.-> E
+    K --> E[Evaluasi<br/>Silhouette - DBI - CH]
+    E --> J[Juara: S2 - 2 segmen<br/>+ demo pre-fitted]
+```
+
+Catatan dari review draf: (1) kotak S3 wajib dilabel DL + beda warna (kuning) — di
+drafmu DL-nya "tak terlihat" padahal S3 Autoencoder itulah komponen DL; (2) tambah
+cabang putus-putus Hierarchical/DBSCAN sebagai pembanding agar tidak dikira
+disembunyikan; (3) tambah sumber k=2 dan output akhir (2 segmen + demo).
