@@ -72,6 +72,28 @@ penentu klaster dan autoencoder hanya sebagai pengekstrak fitur — sesuai batas
 
 ---
 
+## Slide 5b — Kamus Data (cadangan 1 slide / bahan tanya jawab)
+
+**Tulis (tabel ringkas, train 37.500 × 13):**
+
+| Kolom | Tipe / Missing | Deskripsi & fakta |
+|---|---|---|
+| `record_id` | ID unik (`Rxxxxx`) | Penanda baris, tidak dipakai clustering |
+| `age_years` | int, 0% | Umur 18–70, median 44 — sama di kedua klaster, bukan pembeda |
+| `income_value` | float, 6,2% | Pendapatan; miring (median ±12,7 jt, max 495 jt); loyal ±93,5 jt vs lainnya ±12,8 jt |
+| `tenure_months` | int 1–72, 0% | Lama jadi pelanggan; **bimodal** (median 1, top 72) — pembelah utama 2 klaster (±8 vs ±70 bln) |
+| `monthly_spend` | float, 5,0% | Belanja/bulan; loyal ±716 vs lainnya ±71 |
+| `purchase_rate` | float, 4,0% | Frekuensi beli; loyal ±14,6 vs lainnya ±1,1 |
+| `order_value` | float, 0% | Nilai per order; klaster 0 justru lebih besar (±128 vs ±17: jarang tapi besar) |
+| `promo_usage_rate` | float 0–1, 5,1% | Proporsi transaksi promo; klaster 0 lebih promo-driven (0,42 vs 0,17) |
+| `return_rate` | float 0–0,85, 5,0% | Tingkat retur; rata-rata 0,16, klaster 0 sedikit lebih tinggi |
+| `browse_minutes` | float, 8,0% | Durasi browsing; loyal lebih lama (±86 vs ±49 mnt) |
+| `support_contacts` | float 0–9, 4,0% | Kontak CS; rata-rata 1,58, sama di kedua klaster |
+| `payment_channel` | A (50%) / C (30%) / B (20%), 0% | Proporsi identik antar-klaster → tidak membedakan |
+| `market_area` | A (50%) / B (30%) / C (20%), 0% | Proporsi identik antar-klaster → tidak membedakan |
+
+**Narasi 1 kalimat:** "Segmentasi murni ditentukan perilaku transaksi — bukan demografi, channel, maupun area."
+
 ## Slide 6 — Metode (±1 menit)
 
 **Tulis:**
